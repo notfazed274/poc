@@ -6,7 +6,7 @@ class TestHomepage:
     def test_index(self, browser):
         page = HomePage(browser)
         page.open()
-        page.get_social_media('facebook')
+        page.open_social_media('facebook')
 
     def test_another_thing(self, browser):
         page = TeamPage(browser)

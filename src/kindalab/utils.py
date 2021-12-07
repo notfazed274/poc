@@ -1,4 +1,4 @@
-
+from selenium.webdriver.common.by import By
 
 class Page:
 
@@ -13,8 +13,8 @@ class Page:
     def get_title(self):
         return
 
-    def get_social_media(self, social):
-        self.browser.find_element_by_css_selector(f'a[href*={social}]')
+    def open_social_media(self, social):
+        self.browser.find_element(By.CSS_SELECTOR, f'a[href*={social}]')
 
 
 class HomePage(Page):
