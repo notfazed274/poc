@@ -12,7 +12,8 @@ class TestHomepage:
         page = HomePage(browser)
         page.open()
         phrase = 'We are a team with over'
-        assert phrase in page.get_overview()
+        overview = page.get_overview()
+        assert phrase in overview
 
 
 
