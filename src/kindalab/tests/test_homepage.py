@@ -1,15 +1,19 @@
-from kindalab.utils import *
+from kindalab.pages.utils import *
 
 
 class TestHomepage:
 
-    def test_index(self, browser):
+    def test_social_media(self, browser):
         page = HomePage(browser)
         page.open()
-        page.open_social_media('facebook')
+        page.open_social_media('instagram')
 
-    def test_another_thing(self, browser):
-        page = TeamPage(browser)
+    def test_overview(self, browser):
+        page = HomePage(browser)
         page.open()
-        assert 'Google' == browser.title
+        phrase = 'We are a team with over'
+        assert phrase in page.get_overview()
+
+
+
 

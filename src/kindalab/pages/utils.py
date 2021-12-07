@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class Page:
 
     url = None
@@ -20,6 +21,10 @@ class Page:
 class HomePage(Page):
 
     url = 'https://kindalab.co/'
+
+    def get_overview(self):
+        overview = self.browser.find_element(By.CLASS_NAME, 'overview-container')
+        return overview.text
 
 
 class TeamPage(Page):
